@@ -4,12 +4,12 @@ const overlay = document.querySelector('[data-modal-overlay]')
 
 listModalButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
-    const modal = document.querySelector(button.dataset.modalContainerTarget)
-    openModal(modal)
+    openModal(button)
   })
 })
 
-function openModal(modal) {
+function openModal(button) {
+  const modal = document.querySelector(button.dataset.modalContainerTarget)
   if (modal == null) {
     return
   }
