@@ -35,3 +35,10 @@ function closeModal(button) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+overlay.addEventListener('click', (event) => {
+  const listActiveElements = document.querySelectorAll('.active')
+  listActiveElements.forEach((element) => {
+    element.classList.remove('active')
+  })
+})
