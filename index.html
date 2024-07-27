@@ -8,9 +8,11 @@
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <button data-modal-button>Open Modal</button>
+    <button data-modal-button data-modal-container-target="#modal-container">
+      Open Modal
+    </button>
 
-    <div data-modal-container class="modal-container">
+    <div data-modal-container class="modal-container" id="modal-container">
       <header class="modal-header-container">
         <h2 class="modal-heading">Modal</h2>
         <button data-modal-close-button class="modal-close-button">

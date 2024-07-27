@@ -15,7 +15,9 @@
   border-radius: 0.5rem;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
+  transform: scale(0);
+  transition: transform 1s ease;
   width: var(--modal-container-width);
 }
 
@@ -50,4 +52,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  pointer-events: none;
+}
+
+.active {
+  transform: scale(1);
 }
