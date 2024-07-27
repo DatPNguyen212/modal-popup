@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --modal-close-button-font-size: 2rem;
+  --modal-container-width: 600px;
+}
+
+.modal-container {
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--modal-container-width);
+}
+
+.modal-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.modal-heading {
+  margin-left: 10px;
+}
+
+.modal-close-button {
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: var(--modal-close-button-font-size);
+}
+
+.modal-section-container {
+  padding: 10px;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
