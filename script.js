@@ -9,6 +9,8 @@ listModalButtons.forEach((button) => {
 })
 
 function openModal(modal) {
-  console.log(modal)
+  if (modal == null) {
+    return
+  }
   modal.classList.add('active')
 }
