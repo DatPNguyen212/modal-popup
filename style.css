@@ -9,6 +9,7 @@
   --modal-container-width: 600px;
   --modal-container-background-color: white;
   --modalAndOverlay-transition-duration: 0.4s;
+  --modal-close-button-hover-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-container {
@@ -43,6 +44,22 @@
   outline: none;
   background: none;
   font-size: var(--modal-close-button-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-close-button:hover::before {
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  right: -20%;
+  bottom: 20%;
+  content: '';
+  border-radius: 50%;
+  background: var(--modal-close-button-hover-color);
+  z-index: -1;
 }
 
 .modal-section-container {
